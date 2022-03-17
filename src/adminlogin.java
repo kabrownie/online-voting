@@ -21,12 +21,17 @@ public class adminlogin extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                //login
 
             }
         });
         homePageButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+
+                setVisible(false);
+                home link = new home();
+                link.setVisible(true);
 
             }
         });

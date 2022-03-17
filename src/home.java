@@ -10,7 +10,7 @@ public class home extends JFrame{
     public home() {
         setContentPane(homepanel);
         setTitle("welcome");
-        setSize(300, 450);
+        setSize(400, 450);
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
@@ -18,12 +18,18 @@ public class home extends JFrame{
         adminLoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                setVisible(false);
+                adminlogin link = new adminlogin();
+                link.setVisible(true);
 
             }
         });
         voterLoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                setVisible(false);
+                voterLogin link = new voterLogin();
+                link.setVisible(true);
 
             }
         });

@@ -22,12 +22,16 @@ public class voterLogin extends JFrame {
         goToRegPageButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                setVisible(false);
+                voterReg link = new voterReg();
+                link.setVisible(true);
 
             }
         });
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                //go to vote
 
             }
         });
