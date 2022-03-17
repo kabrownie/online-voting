@@ -30,9 +30,11 @@ public class voterReg extends JFrame {
         registerNowButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-              ///go to vote
+              ///
 
-                //database connection
+
+
+                //database  voters connection
 
                 try {
                     Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/online_voting","newuser","Karanja_019");
@@ -44,14 +46,27 @@ public class voterReg extends JFrame {
                     Pstatement.setString(5,passwordConfm.getText());
 
 
-                    if(password.getText().equalsIgnoreCase(passwordConfm.getText()))
+                        if(regNum.getText().trim().isEmpty() ||firstName.getText().trim().isEmpty()  ||lastName.getText().trim().isEmpty()  ||password.getText().trim().isEmpty()  ||passwordConfm.getText().trim().isEmpty())  {
+                            JOptionPane.showMessageDialog(null,"Please fill in the required field!.");
+                    }
+
+
+
+                    else if(password.getText().equalsIgnoreCase(passwordConfm.getText()))
                     {
 
                         Pstatement.executeUpdate();
-                        JOptionPane.showMessageDialog(null,"You have been Registered Successfully");
+                        JOptionPane.showMessageDialog(null,"You have been Registered Successfully" +"\n" + "click ok to proceed to the login page");
+                        setVisible(false);
+                        voterLogin link = new voterLogin();
+                        link.setVisible(true);
+
                     }
+
                     else
                     {
+
+
                         JOptionPane.showMessageDialog(null,"password did not match!");
                     }
 

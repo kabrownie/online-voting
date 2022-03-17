@@ -33,6 +33,8 @@ public class voterLogin extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
                 //go to vote
 
+
+
             }
         });
     }
