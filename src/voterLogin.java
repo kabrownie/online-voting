@@ -19,10 +19,11 @@ public class voterLogin extends JFrame {
     public voterLogin() {
 
         setContentPane(logpanel);
-        setTitle("welcome");
+        setTitle("voter login");
         setSize(450, 400);
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
         setVisible(true);
 
 
@@ -41,6 +42,7 @@ public class voterLogin extends JFrame {
                 //go to vote
 
                 // retrive data
+
 
                 ResultSet rs;
                 String username = regNum.getText();

@@ -4,7 +4,8 @@ import java.awt.event.ActionListener;
 import   java.sql.*;
 import java.awt.*;
 import java.awt.event.*;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class voterReg extends JFrame {
@@ -20,10 +21,11 @@ public class voterReg extends JFrame {
     public voterReg() {
 
         setContentPane(regPanel);
-        setTitle("welcome");
+        setTitle("voter registration");
         setSize(450, 450);
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
         setVisible(true);
 
         registerNowButton.addActionListener(new ActionListener() {
@@ -35,6 +37,10 @@ public class voterReg extends JFrame {
 
                 //database  voters connection
 
+                ResultSet rs;
+                String username = regNum.getText();
+                String query = "SELECT * FROM `voters` WHERE `reg_no` =? ";
+
                 try {
                     Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/online_voting","newuser","Karanja_019");
                     PreparedStatement Pstatement=connection.prepareStatement("insert into voters values(?,?,?,?,?)");
@@ -44,12 +50,22 @@ public class voterReg extends JFrame {
                     Pstatement.setString(4,password.getText());
                     Pstatement.setString(5,passwordConfm.getText());
 
+                    PreparedStatement ps = connection.prepareStatement(query);
+                    ps.setString(1, username);
 
-                        if(regNum.getText().trim().isEmpty() ||firstName.getText().trim().isEmpty()  ||lastName.getText().trim().isEmpty()  ||password.getText().trim().isEmpty()  ||passwordConfm.getText().trim().isEmpty())  {
+                    rs = ps.executeQuery();
+
+
+
+
+                    if(regNum.getText().trim().isEmpty() ||firstName.getText().trim().isEmpty()  ||lastName.getText().trim().isEmpty()  ||password.getText().trim().isEmpty()  ||passwordConfm.getText().trim().isEmpty())  {
                             JOptionPane.showMessageDialog(null,"Please fill in the required field!.");
                     }
 
 
+                   else if(rs.next()){
+                        JOptionPane.showMessageDialog(null,"The user is already registered!");
+                    }
 
                     else if(password.getText().equalsIgnoreCase(passwordConfm.getText()))
                     {
@@ -60,7 +76,9 @@ public class voterReg extends JFrame {
                         voterLogin link = new voterLogin();
                         link.setVisible(true);
 
+
                     }
+
 
                     else
                     {
@@ -71,6 +89,7 @@ public class voterReg extends JFrame {
 
                 } catch (SQLException e1) {
                     e1.printStackTrace();
+                    Logger.getLogger(voterLogin.class.getName()).log(Level.SEVERE, null,e1);
                 }
 
 

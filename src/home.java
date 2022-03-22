@@ -13,6 +13,7 @@ public class home extends JFrame{
         setSize(400, 450);
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
         setVisible(true);
 
         adminLoginButton.addActionListener(new ActionListener() {
