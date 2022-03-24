@@ -29,30 +29,28 @@ public class voting  extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-
+        ///
         voteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
                 try {
+
                     Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/online_voting","newuser","Karanja_019");
 
-                    PreparedStatement Pstatement=connection.prepareStatement("insert into president_rank values(?,?)");
+                    PreparedStatement Pstatement=connection.prepareStatement("insert into president_rank values(?)");
                     Pstatement.setString(1,selectPresident.getSelectedItem().toString());
-                    Pstatement.setString(2,"");
 
-                    PreparedStatement Pstatement2=connection.prepareStatement("insert into v_president_rank values(?,?)");
+                    PreparedStatement Pstatement2=connection.prepareStatement("insert into v_president_rank values(?)");
                     Pstatement2.setString(1,selectVice.getSelectedItem().toString());
-                    Pstatement2.setString(2,"");
 
 
-                    PreparedStatement Pstatement3=connection.prepareStatement("insert into sec_rank  values(?,?)");
+                    PreparedStatement Pstatement3=connection.prepareStatement("insert into sec_rank  values(?)");
                     Pstatement3.setString(1,selectSec.getSelectedItem().toString());
-                    Pstatement3.setString(2,"");
 
-                    PreparedStatement Pstatement4=connection.prepareStatement("insert into treasure_rank values(?,?)");
+                    PreparedStatement Pstatement4=connection.prepareStatement("insert into treasur_rank values(?)");
                     Pstatement4.setString(1,selectTresure.getSelectedItem().toString());
-                    Pstatement4.setString(2,"");
+
 
 
 

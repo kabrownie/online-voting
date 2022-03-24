@@ -39,6 +39,7 @@
         </constraints>
         <properties>
           <model>
+            <item value=""/>
             <item value="David Maina"/>
             <item value="Joy Njeri"/>
           </model>
@@ -66,6 +67,7 @@
         </constraints>
         <properties>
           <model>
+            <item value=""/>
             <item value="Jseph Kerieng"/>
             <item value="Noel Otieno"/>
           </model>
@@ -85,6 +87,7 @@
         </constraints>
         <properties>
           <model>
+            <item value=""/>
             <item value="Otis Oliech"/>
             <item value="Faith Moraa"/>
           </model>
@@ -104,6 +107,7 @@
         </constraints>
         <properties>
           <model>
+            <item value=""/>
             <item value="Tom Kimani"/>
             <item value="Kevin githinji"/>
           </model>
