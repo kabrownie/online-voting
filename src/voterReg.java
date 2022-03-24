@@ -64,7 +64,7 @@ public class voterReg extends JFrame {
 
 
                    else if(rs.next()){
-                        JOptionPane.showMessageDialog(null,"The user is already registered!");
+                        JOptionPane.showMessageDialog(null,"This user already exist!");
                     }
 
                     else if(password.getText().equalsIgnoreCase(passwordConfm.getText()))
