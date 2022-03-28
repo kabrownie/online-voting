@@ -42,8 +42,13 @@
         <properties>
           <model>
             <item value=""/>
+<<<<<<< HEAD
             <item value="1. David Maina"/>
             <item value="2. Joy Njeri"/>
+=======
+            <item value="David Maina"/>
+            <item value="Joy Njeri"/>
+>>>>>>> 184bcec66ecaff7070a477db2c0fa7ad73b0370a
           </model>
         </properties>
       </component>
@@ -63,6 +68,21 @@
           <text value="vicepresident"/>
         </properties>
       </component>
+<<<<<<< HEAD
+=======
+      <component id="1fb10" class="javax.swing.JComboBox" binding="selectVice">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value=""/>
+            <item value="Jseph Kerieng"/>
+            <item value="Noel Otieno"/>
+          </model>
+        </properties>
+      </component>
+>>>>>>> 184bcec66ecaff7070a477db2c0fa7ad73b0370a
       <component id="23fc7" class="javax.swing.JLabel">
         <constraints>
           <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
@@ -78,8 +98,13 @@
         <properties>
           <model>
             <item value=""/>
+<<<<<<< HEAD
             <item value="1. Otis Oliech"/>
             <item value="2. Faith Moraa"/>
+=======
+            <item value="Otis Oliech"/>
+            <item value="Faith Moraa"/>
+>>>>>>> 184bcec66ecaff7070a477db2c0fa7ad73b0370a
           </model>
         </properties>
       </component>
@@ -98,8 +123,13 @@
         <properties>
           <model>
             <item value=""/>
+<<<<<<< HEAD
             <item value="1. Tom Kimani"/>
             <item value="2. Kevin githinji"/>
+=======
+            <item value="Tom Kimani"/>
+            <item value="Kevin githinji"/>
+>>>>>>> 184bcec66ecaff7070a477db2c0fa7ad73b0370a
           </model>
         </properties>
       </component>

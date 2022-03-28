@@ -55,18 +55,30 @@ public class voting  extends JFrame {
 
 
                 try {
+<<<<<<< HEAD
+=======
 
-                    PreparedStatement Pstatement=connection.prepareStatement("insert into president_rank values(?,?)");
+                    Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/online_voting","newuser","Karanja_019");
+>>>>>>> 184bcec66ecaff7070a477db2c0fa7ad73b0370a
+
+                    PreparedStatement Pstatement=connection.prepareStatement("insert into president_rank values(?)");
                     Pstatement.setString(1,selectPresident.getSelectedItem().toString());
+<<<<<<< HEAD
                     Pstatement.setString(2,voter.getText());
+=======
+>>>>>>> 184bcec66ecaff7070a477db2c0fa7ad73b0370a
 
-                    PreparedStatement Pstatement2=connection.prepareStatement("insert into v_president_rank values(?,?)");
+                    PreparedStatement Pstatement2=connection.prepareStatement("insert into v_president_rank values(?)");
                     Pstatement2.setString(1,selectVice.getSelectedItem().toString());
+<<<<<<< HEAD
                     Pstatement2.setString(2,voter.getText());
+=======
+>>>>>>> 184bcec66ecaff7070a477db2c0fa7ad73b0370a
 
 
-                    PreparedStatement Pstatement3=connection.prepareStatement("insert into sec_rank  values(?,?)");
+                    PreparedStatement Pstatement3=connection.prepareStatement("insert into sec_rank  values(?)");
                     Pstatement3.setString(1,selectSec.getSelectedItem().toString());
+<<<<<<< HEAD
                     Pstatement3.setString(2,voter.getText());
 
                     PreparedStatement Pstatement4=connection.prepareStatement("insert into treasur_rank values(?,?)");
@@ -86,6 +98,11 @@ public class voting  extends JFrame {
                         JOptionPane.showMessageDialog(null,"invalid registration number!");
 
                     }
+=======
+
+                    PreparedStatement Pstatement4=connection.prepareStatement("insert into treasur_rank values(?)");
+                    Pstatement4.setString(1,selectTresure.getSelectedItem().toString());
+>>>>>>> 184bcec66ecaff7070a477db2c0fa7ad73b0370a
 
 
                     else if(rs.next()){
