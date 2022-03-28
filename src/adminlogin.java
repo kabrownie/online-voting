@@ -15,8 +15,8 @@ public class adminlogin extends JFrame {
     public adminlogin() {
         setContentPane(adminlogpanel);
         setTitle("admin");
-        setSize(450, 350);
-        setResizable(false);
+        setSize(600, 400);
+        setResizable(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);

@@ -10,8 +10,8 @@ public class home extends JFrame{
     public home() {
         setContentPane(homepanel);
         setTitle("welcome");
-        setSize(400, 450);
-        setResizable(false);
+        setSize(600, 400);
+        setResizable(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);

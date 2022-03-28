@@ -22,8 +22,8 @@ public class voterReg extends JFrame {
 
         setContentPane(regPanel);
         setTitle("voter registration");
-        setSize(450, 450);
-        setResizable(false);
+        setSize(600, 450);
+        setResizable(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);

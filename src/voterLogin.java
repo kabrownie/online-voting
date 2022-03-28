@@ -20,8 +20,8 @@ public class voterLogin extends JFrame {
 
         setContentPane(logpanel);
         setTitle("voter login");
-        setSize(450, 400);
-        setResizable(false);
+        setSize(600, 400);
+        setResizable(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);

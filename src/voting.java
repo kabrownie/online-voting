@@ -20,8 +20,8 @@ public class voting  extends JFrame {
 
         setContentPane(votingpanel);
         setTitle("voting");
-        setSize(450, 400);
-        setResizable(false);
+        setSize(600, 400);
+        setResizable(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -35,10 +35,26 @@ public class voting  extends JFrame {
                 String username = voter.getText();
                 String query = "SELECT * FROM `president_rank` WHERE `voter` =? ";
 
+                ResultSet rs2;
+                String username2 = voter.getText();
+                String query2 = "SELECT * FROM `voters` WHERE `reg_no` =?";
 
                 try {
+                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/online_voting", "newuser", "Karanja_019");
+                    PreparedStatement ps2 = connection.prepareStatement(query2);
+                    ps2.setString(1, username2);
 
-                    Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/online_voting","newuser","Karanja_019");
+
+                    rs2 = ps2.executeQuery();
+
+
+
+
+
+
+
+
+                try {
 
                     PreparedStatement Pstatement=connection.prepareStatement("insert into president_rank values(?,?)");
                     Pstatement.setString(1,selectPresident.getSelectedItem().toString());
@@ -66,6 +82,10 @@ public class voting  extends JFrame {
                     if(voter.getText().trim().isEmpty())  {
                         JOptionPane.showMessageDialog(null,"Please fill in the required field!.");
                     }
+                    else if (!rs2.next()){
+                        JOptionPane.showMessageDialog(null,"invalid registration number!");
+
+                    }
 
 
                     else if(rs.next()){
@@ -89,7 +109,9 @@ public class voting  extends JFrame {
 
 
 
-
+                } catch (SQLException e1) {
+                    Logger.getLogger(voterLogin.class.getName()).log(Level.SEVERE, null,e1);
+                }
 
                 } catch (SQLException e1) {
                     e1.printStackTrace();
