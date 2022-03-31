@@ -12,7 +12,7 @@ public class adminpanel extends JFrame{
     private JButton totalVotesCastButton;
     private JLabel votescast;
     private JLabel result;
-    private JButton button1;
+    private JButton home;
     private JButton resultsButton;
     private JLabel pres2;
     private JLabel vice1;
@@ -333,6 +333,16 @@ public class adminpanel extends JFrame{
 			method returning line number in code */
                     e.printStackTrace();
                 }
+            }
+        });
+        home.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                setVisible(false);
+                home link = new home();
+                link.setVisible(true);
+
             }
         });
     }

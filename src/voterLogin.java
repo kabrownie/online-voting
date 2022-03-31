@@ -1,11 +1,7 @@
-import com.mysql.cj.MysqlConnection;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import   java.sql.*;
-import java.awt.*;
-import java.awt.event.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,6 +11,7 @@ public class voterLogin extends JFrame {
     private JButton loginButton;
     private JButton goToRegPageButton;
     private JPanel logpanel;
+    private JButton homeButton;
 
     public voterLogin() {
 
@@ -79,6 +76,16 @@ public class voterLogin extends JFrame {
 
 
 
+
+            }
+        });
+        homeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                setVisible(false);
+                home link = new home();
+                link.setVisible(true);
 
             }
         });

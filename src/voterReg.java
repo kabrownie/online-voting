@@ -2,8 +2,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import   java.sql.*;
-import java.awt.*;
-import java.awt.event.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,6 +15,7 @@ public class voterReg extends JFrame {
     private JButton registerNowButton;
     private JButton goToLoginPageButton;
     private JTextField lastName;
+    private JButton homeButton;
 
     public voterReg() {
 
@@ -101,6 +100,16 @@ public class voterReg extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
                 setVisible(false);
                 voterLogin link = new voterLogin();
+                link.setVisible(true);
+
+            }
+        });
+        homeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                setVisible(false);
+                home link = new home();
                 link.setVisible(true);
 
             }

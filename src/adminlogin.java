@@ -45,7 +45,7 @@ public class adminlogin extends JFrame {
 
                     else if (rs.next()){
                         setVisible(false);
-                        voting link = new voting();
+                        adminpanel link = new adminpanel();
                         link.setVisible(true);
 
                     }

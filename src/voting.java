@@ -14,6 +14,7 @@ public class voting  extends JFrame {
     private JComboBox selectTresure;
     private JButton voteButton;
     private JTextField voter;
+    private JButton homeButton;
 
 
     public voting(){
@@ -123,7 +124,17 @@ public class voting  extends JFrame {
             }
 
         });
-}
+        homeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                setVisible(false);
+                home link = new home();
+                link.setVisible(true);
+
+            }
+        });
+    }
     public static void main(String[]args){
         new voting();
     }

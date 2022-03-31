@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="voting">
-  <grid id="27dc6" binding="votingpanel" layout-manager="GridLayoutManager" row-count="20" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="votingpanel" layout-manager="GridLayoutManager" row-count="21" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="467" height="540"/>
+      <xy x="20" y="20" width="467" height="555"/>
     </constraints>
     <properties>
       <background color="-16729925"/>
@@ -91,18 +91,6 @@
           <text value="Treasurer"/>
         </properties>
       </component>
-      <component id="89213" class="javax.swing.JComboBox" binding="selectTresure">
-        <constraints>
-          <grid row="16" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <model>
-            <item value=""/>
-            <item value="1. Tom Kimani"/>
-            <item value="2. Kevin githinji"/>
-          </model>
-        </properties>
-      </component>
       <vspacer id="3a1f9">
         <constraints>
           <grid row="17" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
@@ -164,11 +152,6 @@
           <grid row="13" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <vspacer id="94f90">
-        <constraints>
-          <grid row="15" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </vspacer>
       <vspacer id="61a99">
         <constraints>
           <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
@@ -207,6 +190,26 @@
             <item value="1. Joseph Kerieng"/>
             <item value="2. Noel Otieno"/>
           </model>
+        </properties>
+      </component>
+      <component id="89213" class="javax.swing.JComboBox" binding="selectTresure">
+        <constraints>
+          <grid row="15" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value=""/>
+            <item value="1. Tom Kimani"/>
+            <item value="2. Kevin githinji"/>
+          </model>
+        </properties>
+      </component>
+      <component id="f4efb" class="javax.swing.JButton" binding="homeButton" default-binding="true">
+        <constraints>
+          <grid row="20" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="home"/>
         </properties>
       </component>
     </children>
